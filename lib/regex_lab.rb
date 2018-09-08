@@ -23,5 +23,10 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-
+  num = phone.scan(/(\d+).(\d+).(\d+)/)
+  if num[0][0].length == 3 && num[0][1].length == 3 && num[0][2].length == 4
+    return true
+  else
+    return false
+  end
 end
